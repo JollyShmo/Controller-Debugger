@@ -24,13 +24,14 @@ def display_controllers(joystick):
 def display_buttons(joystick, font, text_y):
     # Define button labels for different controllers
     button_labels = []
-
+    # Get the name of the device, if not on the list needs to be added here
     if joystick.get_name() == 'PC Game Controller':
         button_labels = ['X', 'A', 'B', 'Y', 'LB', 'RB', None, None, 'SELECT', 'START']
 
     elif joystick.get_name() == 'Controller (XBOX 360 For Windows)':
         button_labels = ['A', 'B', 'X', 'Y', 'LB', 'RB', 'BACK', 'START', 'LS', 'RS', 'XBOX BUTTON', 'UP', 'DOWN', 'LEFT', 'RIGHT']
-
+    #else:
+    # Have it use default labels
     for k in range(joystick.get_numbuttons()):
         if k < len(button_labels) and joystick.get_button(k):
             button_color = get_button_color(k)
