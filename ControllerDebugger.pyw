@@ -64,7 +64,7 @@ def axis_test():
 
     pygame.draw.circle(screen, left_cursor_color, (left_cursor_x, left_cursor_y), cursor_radius)
     pygame.draw.circle(screen, right_cursor_color, (right_cursor_x, right_cursor_y), cursor_radius)
-##TODO##
+
 def display_axes(joystick, font, text_y):
     for a in range(joystick.get_numaxes()):
         axis_value = joystick.get_axis(a)
