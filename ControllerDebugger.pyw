@@ -30,8 +30,13 @@ def display_buttons(joystick, font, text_y):
 
     elif joystick.get_name() == 'Controller (XBOX 360 For Windows)':
         button_labels = ['A', 'B', 'X', 'Y', 'LB', 'RB', 'BACK', 'START', 'LS', 'RS', 'XBOX BUTTON', 'UP', 'DOWN', 'LEFT', 'RIGHT']
-    #else:
-    # Have it use default labels
+        
+    #elif joystick.get_name() != None | !joystick.get_name() | joystick.get_name() != "":
+    #    for label in button_labels:
+    #        button_labels += joystick.get_names()
+    #     
+    ## TODO ##
+    
     for k in range(joystick.get_numbuttons()):
         if k < len(button_labels) and joystick.get_button(k):
             button_color = get_button_color(k)
